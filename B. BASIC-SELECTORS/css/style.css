@@ -1,0 +1,279 @@
+/* ^^^^^^^^^^BASIC SELECTORS^^^^^^^^^^ */
+/*::::::::::Intro to Selectors::::::::::*/
+/*
+Selectors are one of the most important and powerful parts of CSS because they let us target the content we want to style. When we define a selector in our stylesheet, we’re instructing the browser to match every instance of that selector in the HTML.
+
+Universal Selector.....
+The universal selector targets every element on the page at once and applies the styles we set.
+
+* { 
+  margin: 0; 
+  padding: 0;
+}
+This universal selector will apply the margin and padding styles to every element on the page.
+*/
+
+/* Example: 
+* {
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+*/
+
+/*::::::::::Type Selectors::::::::::*/
+/*
+  Type selectors target element types on the page. They’re also called element selectors because we use the element’s HTML tag as the selector.
+  
+  Using type selectors.....
+  To target the footer element and change its background color, we can write the following CSS rule:
+
+    footer {
+      background-color: lightblue;
+    }
+  To target all paragraphs on the page, we can use a type selector:
+
+    p {
+      color: slategrey;
+      font-size: 18px;
+    }
+*/
+
+body {
+    color: #878787;
+    margin: 0;
+}
+
+/* This ID selector #top will Override class .main-header
+#top {
+    background-color: red;
+}
+*/
+
+/*
+header {
+    background-color: orange;
+}
+*/
+
+h1 {
+    font-size: 90px;
+    color: white;
+}
+
+h2 {
+    font-size: 53px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #48525c;
+}
+
+/*::::::::::ID Selectors::::::::::*/
+/*
+  Unlike a type selector, which targets every element with the corresponding element type, an ID selector lets us assign a unique ID to an element.
+
+  Using ID selectors.....
+  ID selectors are declared using the pound (#) symbol, followed by the ID name.
+
+    #primary-content {
+      background: grey;
+    }
+  This selector will match the HTML element that has an ID attribute with the value primary-content.
+
+  IDs are unique to the page, so an element can only have one ID and a page can only have one element with the same ID name.
+*/
+
+/*
+#primary-content {
+    border: 3px solid red;
+}
+*/
+
+#main-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: solid 10px orange;
+}
+
+/*::::::::::CLASS SELECTORS::::::::::*/
+/*
+ Class selectors let us target elements based on their class attribute. The main difference between a class and an ID selector is that IDs are unique and they’re used to identify one element on the page, whereas a class can target more than one element.
+
+ Using class selectors......
+ Class selectors are defined with the . character followed by the class name.
+
+    .primary-content {
+      background: grey;
+    }
+*/
+
+/*
+.main-header {
+    background-color: orange;
+}
+*/
+
+.primary-content {
+    text-align: center;
+}
+
+/*
+.secondary-content {
+    border-top: 2px solid lightgrey;
+}
+*/
+
+/*::::::::::REUSING CLASSES::::::::::*/
+/*
+  Besides being able to target more than one element with a single class selector, an element can also have multiple classes assigned to it.
+
+  Example of reusing classes.....
+  At times, we may have a lot of repeated CSS in our style sheets. So it's best to create classes for the repeated styles.
+
+  Space-separate each class name in the class attribute:
+
+    <div class="primary-content t-border rounded">
+    Then, target each class in the style sheet:
+
+    .primary-content {
+      background: grey;
+    }
+    .t-border {
+      border-top: 1px solid;
+    }
+    .rounded {
+      border-radius: 10px;
+    }
+*/
+
+.t-border {
+    border-top: 2px solid lightgrey;
+}
+
+/*::::::::::DESCENDANT SELECTORS::::::::::*/
+/*
+  CSS lets us target elements based on their relationship in the HTML document. We can combine selectors to create descendant selectors that target elements that are descendants of an element. This makes our selectors more specific.
+  
+  Examples of descendant selectors.....
+  To create a descendant selector, we’ll need to use two or more selectors separated by whitespace:
+
+    .main-header span {
+      font-size: 26px;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+    }
+*/
+
+/*
+header span {
+    color: white;
+    font-size: 26px;
+}
+*/
+/*This is more specific than the above */
+    .main-header span {
+        color: white;
+        font-size: 26px;
+    }
+
+.title {
+     color: white;
+    font-size: 26px;
+}
+
+ol li {
+    background-color: tomato;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/*::::::::::PSEUDO-CLASSES:::::::::::*/
+/*
+  Pseudo-classes are similar to classes, but they’re not explicitly defined in an element's class attribute. Unlike type, ID and class selectors, pseudo-classes can target elements dynamically based on user interaction, an element’s state, and more.
+  
+  Using pseudo-classes.....
+  Think of a pseudo-class as a keyword we add to a selector to style a special state of an element.
+
+  1.The :link pseudo-class targets links that have not been visited by the user:
+
+    a:link {
+      color: orange;
+    }
+  2.The :visited pseudo-class targets links that have been visited –– or clicked –– by the user:
+
+    a:visited {
+      color: lightblue;
+    }
+  3.The :hover pseudo-class targets an element when a user hovers over it:
+
+    a:hover {
+      color: forestgreen;
+    }
+  4.The :active pseudo-class gets applied when an element is in an active state:
+
+    a:active {
+      color: lightcoral;
+    }
+  5.The :focus pseudo-class is only applied to interactive elements like links, buttons and form elements. The styles are applied as soon as the element receives focus:
+
+    a:focus {
+      color: white;
+      background-color: orange;
+    }
+*/
+a:link {
+    color: orange;
+}
+
+a:visited {
+    color: lightblue;
+}
+
+a:hover {
+    color: forestgreen;
+}
+
+a:active {
+    color: lightcoral;
+}
+
+a:focus {
+    color: white;
+    background-color: orange;
+}
+
+/*::::::::::CSS COMMENTS::::::::::*/
+
+/*
+  Just like in HTML, we can write comments in CSS to add helpful notes and hints that let us know what's going on in our code.
+
+  Using CSS comments.....
+  Comments in CSS begin with a forward-slash and asterisk  and end with an asterisk and forward slash . Everything we write between the opening and closing characters is ignored by the browser.
+*/
+
+.main-header {
+      background: orange; /* Makes the header bg orange */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

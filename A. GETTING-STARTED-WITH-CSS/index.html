@@ -1,0 +1,99 @@
+<!--INLINE AND INTERNAL STYLES-->
+   <!-- 
+   1.When we write inline styles,  we write the in the HTML      file, directly inside an element's tag using a style        attribute.They are very specific and will override all      other styles in the html code. 
+   
+    <body style="background-color: orange;">
+
+    
+   2.Internal styles are embedded in the <head> section of the HTML document and are defined inside a <style> tag.
+   Internal styles are useful for small scale websites where you have little css and for testing purposes. 
+
+         <style>
+      p {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style
+-->
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lake Tahoe</title>
+    <style>
+        p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 90px;
+            color: firebrick;
+        }
+        
+        header {
+            background-color: orange;
+        }
+      </style>
+  </head>
+-->    
+<!--  <body style="background-color: orange;"> -->
+<!--
+   <body>
+    <header>
+      <span>Journey through the Sierra Nevada Mountains</span>
+  <!--    <h1 style="color: white;"> -->
+<!--
+      <h1>
+      Lake Tahoe, California
+      </h1>
+    </header>
+    <p>
+      Lake Tahoe is one of the most breathtaking attractions located in California. It's home to a number of ski resorts, summer outdoor recreation, and tourist attractions. Snow and skiing are a significant part of the area's reputation.
+    </p>
+    <a href="#">Find out more</a>
+  </body>
+</html>
+-->
+
+
+
+<!--EXTERNAL STYLE SHEETS-->
+<!--
+   3a.With an external style sheet we can change the look of an entire website with one file.
+  
+   <link rel="stylesheet" href="css/style.css"> 
+
+   3b.The rel attribute specifies the relationship between the HTML document and the linked document.
+   
+   3c.The href attribute points to the location of the CSS file.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lake Tahoe</title>
+    <link rel="stylesheet" href="css/style.css">
+<!--    IMPORTING STYLE SHEETS WITH @IMPORT -->
+<!--
+    <style>
+      @import "css/import-styles.css";
+    </style>
+-->
+</head>
+
+<body>
+    <header>
+        <span>Journey through the Sierra Nevada Mountains</span>
+        <h1>
+            Lake Tahoe, California
+        </h1>
+    </header>
+    <p>
+        Lake Tahoe is one of the most breathtaking attractions located in California. It's home to a number of ski resorts, summer outdoor recreation, and tourist attractions. Snow and skiing are a significant part of the area's reputation.
+    </p>
+    <a href="#">Find out more</a>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+/* Base Styles -------------------- */
+
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {  
+  font-size: 5.625rem; /* 90px/16px  */
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+/*  display: inline;*/
+}
+
+h2 {
+  font-size: 3.3125em; /* 53px/16px  */
+  font-weight: normal;
+  line-height: 1.1;
+  margin-bottom: 0.5em; /* 26px */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px/16px  */
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
+}
+
+/*
+li {
+    display: inline-block;
+    padding: 0 12px;
+    border-right: solid 1px;
+    margin: 80px 0;
+}
+*/
+/* Pseudo-classes ------------------ */
+
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+/*    display: block;*/
+     display: inline;
+/*     background-color: tomato;*/
+
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, .4);
+}
+
+a:active {
+  color: lightcoral;
+}
+
+/* Main Styles --------------------- */
+
+.main-header {
+  background-color: #ffa949;
+}
+
+.title {
+  color: white;
+  font-size: 1.625rem; /* 26px/16px */
+}
+
+.intro {
+  font-size: 1.25em; /* 20px/16px */
+  line-height: 1.6;  
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.secondary-content {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  border-bottom: 2px solid #dfe2e6;
+}
+
+.callout {
+  font-size: 1.25em;
+    border-bottom: 3px solid;
+    padding: 0 9px 3px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid #ffa949;
+}
+
+.t-border {
+  border-top: 2px solid lightgrey;
+}
+
+/* Layout Styles ------------------ */
+
+.primary-content, 
+.secondary-content {
+  width: 60%;
+  margin: auto;
+}
+
+/*^^^^^^^^^^THE BOX MODEL^^^^^^^^^^*/
+/* ::::::::::THE CSS BOX MODEL::::::::::
+  The box model is what describes the amount of space each element takes up on the page. Let's dig a little deeper into this concept by going over the main components that make up the CSS Box Model.
+*/
+
+/* ::::::::::PADDING::::::::::
+   Padding is often used to give an element's content area some breathing room by separating the content from the surrounding border area.
+
+   Padding Reference.....
+   We can define values for padding as any length or a percentage unit. There are two ways we can set the values for padding. The first way is setting each property individually:
+
+    .wildlife {
+      padding-top: 100px;
+      padding-right: 120px;
+      padding-bottom: 50px;
+      padding-left:  20px;
+    }
+  We can also use the shorthand property for padding, which lets us set the padding on all four sides in one declaration:
+
+    .wildlife {
+      padding: 100px 120px 50px 20px;  
+    }
+The order of the values is: Top, Right, Bottom, Left. Think clockwise.
+*/
+
+    .wild-life {
+        color: white;
+        background-color: #434a52;
+/*
+    padding-top: 100px;
+    padding-right: 120px;
+    padding-bottom: 100px;
+    padding-left: 120px; 
+*/
+    
+/*  padding: 100px 120px 100px 120px;*/
+/*  padding: 100px 120px;*/
+    padding: 18% 24%;
+
+    
+/* ::::::::::BORDERS::::::::::
+  Quick Reference.....
+    border-width
+    Sets the width of a border.
+
+    border-style
+    Sets the style of the element’s borders.
+
+    border-color
+    Sets the color of a border.
+
+    border
+    Shorthand property for setting the individual border property values in one place.
+
+*/
+
+    /*
+    border-width: 10px 20px;
+    border-style: solid dotted;
+    border-color: red #ffa949 blue green;
+*/
+    border-top: 10px solid #ffa949;
+/*
+    border-bottom-style: dashed;
+    border-left-color: green;
+ */   
+
+  
+/* ::::::::::MARGINS::::::::::
+   Margins affect the area outside a box. We commonly use margin properties to create space around elements.
+
+   Quick Reference.....
+   The same order of padding shorthand values applies to the margin property.
+
+    .wildlife {
+      margin: 105px 0 60px 0;
+    }
+   This is exactly the same as writing out the full margin declarations:
+
+    .wildlife {
+      margin-top: 105px;
+      margin-right: 0;
+      margin-bottom: 60px;
+      margin-left: 0;
+     }
+
+*/
+
+/*
+    margin-top: 105px;
+    margin-right: 0;
+    margin-bottom: 60px;
+    margin-left: 0;
+*/
+ margin: 105px 0 60px ;
+
+
+/* ::::::::::DISPLAY VALUES::::::::::
+ With the display property, we can override the default display settings of an element.The three most common types of display values.
+
+*/
+/*  display: none;*/
+        
+}
+
+
+
+
+

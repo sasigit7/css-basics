@@ -1,0 +1,290 @@
+/* Base Styles -------------------- */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {  
+  font-size: 5.625rem; /* 90px/16px  */
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 3.3125em; /* 53px/16px  */
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 .5em; /* 0 0 26px */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px/16px  */
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
+}
+
+img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+/* Pseudo-classes ------------------ */
+
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, .4);
+}
+
+a:active {
+  color: lightcoral;
+}
+
+/*
+ul {
+    list-style-type: square;
+}
+*/
+
+/*
+ol {
+    list-style-type: decimal-leading-zero;
+}
+*/
+
+ul,
+ol {
+/*
+   list-style-position: inside;
+        padding-left: 0;
+        margin-left: 0;
+*/
+    margin: 30px 0;
+}
+
+li {
+/*  border: 1px solid #000;    */
+    margin-bottom: 10px;
+}
+
+/* Main Styles --------------------- */
+
+.main-header {
+  
+    padding-top: 170px;
+    height: 850px;
+/*
+    background-color: #ffa949;
+    background-image: url('../img/mountains.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+*/
+    
+    background: #ffa949 url('../img/mountains.jpg') no-repeat center / cover;
+}
+
+.title {
+  color: white;
+  font-size: 1.625rem; /* 26px/16px */
+}
+
+.intro {
+  font-size: 1.25em; /* 20px/16px */
+  line-height: 1.6;  
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.primary-content {
+	padding-top: 25px;
+  padding-bottom: 95px;
+}
+
+.secondary-content {
+	padding-top: 80px;
+	padding-bottom: 70px;
+  border-bottom: 2px solid #dfe2e6;
+/*    overflow: auto;*/
+}
+
+.callout {
+  font-size: 1.25em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid #ffa949;
+}
+
+.t-border {
+  border-top: 2px solid #dfe2e6;
+}
+
+/* Layout Styles ------------------ */
+
+.primary-content, 
+.secondary-content {
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 900px;
+}
+
+.wildlife {
+  color: white;
+  background-color: #434a52;
+  padding: 18% 24%;
+  border-top: 10px solid #ffa949;
+  margin: 105px 0 60px;
+}
+
+/*^^^^^^^^^^BASIC LAYOUT^^^^^^^^^^*/
+/*::::::::::WIDTH AND HEIGHT PROPERTIES::::::::::*/
+/*
+  By default, an element's width and height are as wide or as tall as the content it holds. But we're able to set our own dimensions with the width and height properties.
+
+*/
+
+.arrow {
+    width: 50px;
+}
+
+/*::::::::::BOX-SIZING AND MAX-WIDTH::::::::::*/
+/*
+ With the box-sizing property, we can alter the way the browser calculates an element's total width and height. We're also able to set the maximum width of an element with the max-width property.
+
+ Quick Reference.....
+ box-sizing:
+ Alters the default CSS box model used to calculate widths and heights of elements.
+
+ max-width:
+ Sets the maximum width of an element. It prevents the used value of the width property from becoming larger than the value set for max-width.
+
+*/
+
+/*::::::::::BACKGROUNDS-COLOR AND IMAGES::::::::::*/
+/*
+ Every HTML element has a background layer that is transparent by default. In this video, you'll learn basic background properties for applying colors and images.
+
+ Quick Reference.....
+ background-image:
+ Sets one or several background images for an element.
+
+ background-size:
+ Sets the size of a background image.
+
+ background-repeat:
+ Controls whether or not the image is tiled and how it gets tiled both vertically and horizontally. The value repeat-y repeats the image vertically, while repeat-x repeats the background image horizontally.
+
+*/
+
+/*::::::::::BACKGROUNDS-SIZE AND POSITION ::::::::::*/
+/*
+  In this video, we'll learn how certain properties affect the size and position of an element's background.
+
+  Quick Reference.....
+  Full Page Background Images in CSS:
+  background-position:
+  Controls the background position of a background image. By default, a background image’s initial position is the top-left corner of the containing element.
+
+  background:
+  Shorthand for setting the individual background values in one place.
+
+  cover:
+  The cover value adjusts the background area so that it's completely covered by the background image, while maintaining its width and height proportions:
+
+    .main-header {
+      background-image: url('../img/mountains.jpg');     
+      background-size: cover;
+    }
+*/
+
+/*::::::::::FLOATS::::::::::*/
+/*
+  Floats are one of the most commonly used methods for laying out a page with CSS. When an element is floated, the element is taken out of the normal flow of the page and placed along the left or right side of its container.
+  
+  Quick Reference:::::
+  The following will float an element over to the right side of its container:
+
+    .tips {
+      float: right;
+    }
+
+  The following will place the element along the left side of its container:
+
+    .tips {
+      float: left;
+    }
+
+   If a block element contains floated children, its height will collapse. In this video, we'll learn two methods for accommodating floated elements.
+
+      Quick Reference:::::
+      overflow
+      clear
+      The clearfix "hack"
+      content: ' '
+*/
+
+/* Floated Columns*/
+.resorts,
+.tips {
+    width: 46.5%;
+    }
+.resorts {
+    float: right;
+}
+.tips {
+    float: left;
+}
+
+/*Float Clearfix*/
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*::::::::::LISTS::::::::::*/
+
+/*
+ In this video, we’ll cover the different ways we can use list properties to control the appearance of our lists.
+ 
+ Quick Reference:::::
+ list-style-type:
+ Sets the appearance of a list item.
+
+ list-style-position:
+ Sets the position of a list marker in a list item. By default, the browser displays the list markers outside the list items.
+
+ list-style:
+ The shorthand property for setting list-style-type, list-style-image and list-style-position.
+*/
+

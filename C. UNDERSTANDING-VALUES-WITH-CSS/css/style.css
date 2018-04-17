@@ -1,0 +1,242 @@
+/* Type Selectors ------------------ */
+
+body {
+  color: #878787;
+  margin: 0;
+/*  font-size: 150%;*/
+/*
+    font-size: 1em;   1em = 16px 
+    font-family: "Helvetica Neue",Helvetica, Arial, sans-serif;
+*/
+/*    font-style: normal;*/
+    line-height: 1.5;
+    font: normal 1em/1.5 "Helvetica Neue",Helvetica, Arial, sans-serif;
+}
+
+h1 {  
+  font-size: 5.625em; /* 90px/16px */
+/*  color: white;*/
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: capitalize;
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+h2 {
+  font-size: 53px;
+    text-decoration: underline
+}
+
+h3 {
+  font-size: 20px;
+  color: #48525c;
+}
+
+
+/* Pseudo-classes ------------------ */
+
+a:link {
+/*  color: orange;*/
+/*  color: #ffa949;*/
+    color: rgb(255, 169, 73);
+    text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+/*  color: forestgreen;*/
+    color: rgba(255, 169, 73, 0.4);
+}
+
+a:active {
+  color: lightcoral;
+}
+
+/* ID Selectors -------------------- */
+
+#main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: solid 10px #ffa949;
+}
+
+/* Class Selectors ----------------- */
+
+.main-header {
+  background-color: #ffa949;
+/*  font-size: 2em;*/
+}
+
+.title {
+  color: white;
+  font-size: 1.625em; /* 26px/16px */
+}
+
+.primary-content,
+.main-header {
+  text-align: center;
+}
+
+.t-border {
+  border-top: 2px solid lightgrey; /* Top border styles */
+}
+
+/*^^^^^^^^^^UNDERSTANDING VALUES WITH CSS^^^^^^^^^^*/
+/*::::::::::COMMON DATA TYPES::::::::::*/
+/*
+  Before we get started, let's take a look at a good reference for CSS data types provided by the Mozilla Developer Network docs. Then, we'll cover the most important data types we'd use on a day-to-day basis.
+
+  https://developer.mozilla.org/en-US/docs/tag/CSS%20Data%20Type
+*/
+
+/*::::::::::PIXEL UNITS::::::::::*/
+/*
+  When we use pixel units, the size we define will always remain the same and will not scale, regardless of the browser window and size of the screen.
+
+  Using pixel units.....
+    .main-header {
+      width: 960px;
+    }
+  main-header will always take up 960px of the screen
+*/
+
+/*::::::::::PERCENTAGES::::::::::*/
+/*
+  We can define number values more fluidly with percentage units. Percentages, by nature, are always relative to something else. When we use a percentage unit in CSS, the percentage value is measured relative to a parent element's length.
+
+  https://developer.mozilla.org/en-US/docs/Web/CSS/percentage
+
+  Using percentages.....
+    .main-header {
+      width: 75%;
+    }
+  main-header will take up 75% of the browser window's width.
+*/
+
+.primary-content, 
+.secondary-content {
+    width: 60%;
+}
+
+/*::::::::::EM UNITS::::::::::*/
+/*
+ Relative length units are relative to other length values. The most commonly used relative unit is the em unit. The em is known as a font-relative unit because it's calculated based on a parent element's font size.
+
+ Using em units.....
+ If we set our body's font-size value to 1em:
+
+    body {
+      font-size: 1em;
+    } 
+ This is equivalent to setting the font-size value to:
+
+    body {
+      font-size: 16px;
+    }
+Converting pixels to ems.....
+To convert a px value to its equivalent em value, we can follow a simple formula: divide an element’s px value by the parent element's font-size value.
+
+For example:
+
+    .intro {
+      font-size: 24px;
+    }
+To convert the font-size value of intro to an em value, we'll need to divide 24 by the parent element's font-size. In this case, the parent element is the body element, which has the font-size set to 1em, or 16px.
+
+24/16 = 1.5
+This gives us an em-based font-size value of:
+
+.intro {
+  font-size: 1.5em;  
+}
+*/
+
+/*::::::::::REM UNITS::::::::::*/
+/*
+ The rem unit is similar to the em unit. The difference is that rem is relative only to the root element of the page. This gets us around the compounding font size issue we experience with em units.
+
+ Using rem units.....
+    h1 {
+      font-size: 5.625rem;
+    }
+ 
+The h1 font size is now relative to the default 16px font size of the root <html> element.
+*/
+
+/*::::::::::COLOR VALUES::::::::::*/
+/*
+ Color plays an important role in web design. With CSS, we can describe a color value in different ways. The three most common ways are with a keyword, a hexadecimal value, or an RGB function.
+
+ Common Color Values.....
+ A. Hexadecimal values
+
+    .main-header {
+      background-color: #ff0033;
+    }
+ B. RGB Values
+
+    a:link {
+      color: rgb(255, 169, 73);
+    }
+ C. RGBa Values
+
+    a:hover {
+      color: rgba(255, 169, 73, .4);
+    }
+*/
+
+/*::::::::::TEXT STYLES::::::::::*/
+/*
+ Text has a significant effect on how we view a web page. In this video, we'll cover common properties for defining text styles.
+
+ Quick Reference.....
+ text-align:
+ Let's us control the horizontal alignment of text.
+
+ text-transform:
+ Changes the case of text – whether it's uppercase, lowercase, or capitalized.
+
+ text-decoration:
+ Sets the line decoration of elements. We'll commonly use this property to remove underlines in links.
+
+ font-weight:
+ Sets how thick or thin the characters are displayed.
+ 100 - minimum
+ 400 - ideal
+ 900 - maximum
+*/
+
+/*::::::::::FONT PROPERTIES::::::::::*/
+/*
+ Like text properties, font properties let us change the appearance of text by assigning a font family, font size, font style, and more.
+
+ CSS font stacks are prioritized lists of fonts that the browser will cycle through until it finds a font that is installed on the user’s system.
+
+ font-family...
+ Defines a typeface for our text.
+
+ font-style...
+ Allows italic or oblique faces to be selected within a font family.
+*/
+
+/*::::::::::LINE HEIGHT::::::::::*/
+/*
+ With the line-height property, we can increase, or decrease, the vertical gaps between lines of text.
+
+ We'll commonly use the line-height property in the body element to set the overall line-height of the page. For example:
+
+    body {
+      line-height: 1.5;
+    }
+ The browser multiplies the font size of each element by 1.5 to determine their line height.
+
+ font:
+ A shorthand property that lets us write all the font properties in one value.
+
+    body {
+      font: normal 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+*/
